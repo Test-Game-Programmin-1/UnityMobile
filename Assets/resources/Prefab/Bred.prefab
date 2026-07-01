@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 430053108478734440}
   - component: {fileID: 8246229876400105262}
   - component: {fileID: 7790797594658519801}
+  - component: {fileID: -6470229849796691804}
   m_Layer: 0
   m_Name: Bred
   m_TagString: Untagged
@@ -112,3 +113,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6470229849796691804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332971414193529209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d72c3d23c318d64aab368c1c0be6890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Food
+  type: 0
+  gridPosition: {x: 0, y: 0}
+  tPos: {x: 0, y: 0, z: 0}
+  tRot: {x: 0, y: 0, z: 0, w: 0}
+  speed: 15
