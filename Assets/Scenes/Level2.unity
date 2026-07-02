@@ -331,9 +331,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4988938501128368186, guid: be88077afacd1074298871308f424f52, type: 3}
-      propertyPath: NextLVL
-      value: Level3
-      objectReference: {fileID: 0}
+      propertyPath: UndoButton
+      value: 
+      objectReference: {fileID: 1398639133}
+    - target: {fileID: 4988938501128368186, guid: be88077afacd1074298871308f424f52, type: 3}
+      propertyPath: ResetButton
+      value: 
+      objectReference: {fileID: 1398639134}
     - target: {fileID: 6102177416735660477, guid: be88077afacd1074298871308f424f52, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -394,6 +398,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1bc47b486344f448d8f79e8fec7018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+--- !u!114 &671429663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6854612275353734186, guid: be88077afacd1074298871308f424f52, type: 3}
+  m_PrefabInstance: {fileID: 671429661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9fa61dd7c5fa44488d4b04e2f7b9780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CommandManager
 --- !u!1001 &754498232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -782,10 +797,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 671429662}
-    - target: {fileID: 2196231676396754525, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Reset
-      objectReference: {fileID: 0}
     - target: {fileID: 3297238682598349165, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -870,19 +881,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7857754366211397258, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 671429663}
     - target: {fileID: 7875903594587806823, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 671429662}
-    - target: {fileID: 7875903594587806823, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Win
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
+--- !u!114 &1398639133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7857754366211397258, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
+  m_PrefabInstance: {fileID: 1398639132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &1398639134 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2196231676396754525, guid: 8fbd459f29b11c94dbd37d7ef706d21a, type: 3}
+  m_PrefabInstance: {fileID: 1398639132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1425342479
 GameObject:
   m_ObjectHideFlags: 0

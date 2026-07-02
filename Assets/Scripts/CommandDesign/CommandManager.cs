@@ -4,8 +4,8 @@ public class CommandManager : MonoBehaviour
 {
     public static CommandManager instance;
     private Stack<ICommand> undoStack = new();
-    private Stack<ICommand> redoStack = new();
-
+    public bool CanUndo = false;
+    public bool Moved = false;
     void Awake()
     {
         if(instance != null)
@@ -17,25 +17,16 @@ public class CommandManager : MonoBehaviour
     }
     public void AddCommand(ICommand command)
     {
-        if(redoStack.Count > 0)
-        {
-            redoStack.Clear();
-        }
+        undoStack.Clear();
+        CanUndo = true;
+        Moved = true;
         undoStack.Push(command);
-
-        command.Execute();
     }
     public void UndoCommand()
     {
-        if(redoStack.Count <= 0)
+        if(undoStack.Count <= 0)
         return;
-
-        undoStack.Push(redoStack.Peek());
-        redoStack.Pop().Execute();
-    }
-    public void ClearCommands()
-    {
-        undoStack.Clear();
-        redoStack.Clear();
+        undoStack.Pop().UNDO();
+        CanUndo = false;
     }
 }

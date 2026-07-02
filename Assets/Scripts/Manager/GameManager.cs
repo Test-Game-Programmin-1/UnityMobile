@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
         reverseStack.Reverse();
         for (int i = 0; i < reverseStack.Count; i++) reverseStack[i].Flip(destination, anchor, stackHeight, i, direction, Height);
 
+        MoveCommand NewMove = new(originalStack, origin, destination, direction, anchor, stackHeight, Height);
+
         Win();
     }
     bool moveBreadAndSlice()
